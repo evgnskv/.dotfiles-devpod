@@ -2,6 +2,7 @@
 
 export NIXPKGS_ALLOW_UNFREE=1
 
+mkdir -p "$HOME"/.config/nixpkgs
 ln -sf "$PWD/nix/.config/nixpkgs/config.nix" \
        "$HOME"/.config/nixpkgs/config.nix
 

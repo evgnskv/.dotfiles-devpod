@@ -15,7 +15,7 @@
         fzf
         ripgrep
         lsd
-        nerdfonts
+        nerd-fonts
       ];
     };
   };
