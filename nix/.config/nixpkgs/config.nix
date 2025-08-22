@@ -14,6 +14,8 @@
         sshuttle
         fzf
         ripgrep
+        lsd
+        nerrdfonts
       ];
     };
   };
