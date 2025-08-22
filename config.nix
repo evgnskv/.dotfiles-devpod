@@ -4,11 +4,11 @@
       name = "toolbox";
       paths = [
         coreutils
-        iproute2mac
         wget
         jq
         yq
         werf
+        claude-code
       	tmux
       	neovim
         stow
