@@ -15,7 +15,6 @@
         sshuttle
         fzf
         ripgrep
-        lsd
       ];
     };
   };
