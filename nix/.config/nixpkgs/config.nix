@@ -4,7 +4,6 @@
       name = "toolbox";
       paths = [
         coreutils
-        wget
         jq
         yq
         werf
