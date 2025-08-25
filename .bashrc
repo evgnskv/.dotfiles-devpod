@@ -3,6 +3,7 @@
 # for examples
 
 export LANG=en_US.UTF-8
+export PAGER="nvim +Man! -"
 
 # If not running interactively, don't do anything
 case $- in
