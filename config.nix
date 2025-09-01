@@ -4,6 +4,7 @@
       name = "toolbox";
       paths = [
         coreutils
+        bash-completion
         jq
         yq
         werf
