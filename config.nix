@@ -7,8 +7,6 @@
         bash-completion
         jq
         yq
-        werf
-        claude-code
       	tmux
       	neovim
         stow
