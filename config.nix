@@ -4,6 +4,8 @@
       name = "toolbox";
       paths = [
         coreutils
+        xorg.libX11
+        xorg.xdpyinfo
         bash-completion
         bootdev-cli
         go
