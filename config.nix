@@ -9,7 +9,6 @@
         bash-completion
         bootdev-cli
         go
-        python3
         uv
         jq
         yq
