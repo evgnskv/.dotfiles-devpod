@@ -1,0 +1,6 @@
+[user]
+	name = evgnskv
+	email = evgnskv@boot.dev
+	username = evgnskv
+[core]
+  excludesFile = "~/.gitignore"

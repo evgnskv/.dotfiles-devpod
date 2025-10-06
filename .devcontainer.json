@@ -1,0 +1,35 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "features": {
+    "ghcr.io/devcontainers/features/nix:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "moby": "false"
+    }
+  },
+  "runArgs": [
+    "--privileged",
+    "-v", "/Users/evgnskv/.strongbox/agent.sock:/home/vscode/.strongbox/agent.sock"
+  ],
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+    "source=${env:HOME}/.ssh/config,target=/etc/ssh/ssh_config.d/custom.conf,type=bind,readonly",
+    "source=${env:HOME}/.ssh/github_ed25519,target=/home/vscode/.ssh/github_ed25519,type=bind,readonly",
+    "source=${env:HOME}/.ssh/github_ed25519.pub,target=/home/vscode/.ssh/github_ed25519.pub,type=bind,readonly"
+  ],
+  "containerEnv": {
+    "DOCKER_BUILDKIT": "1",
+    "SDL_ALLOW_SOFTWARE_RENDERING": "1",
+    "SDL_RENDER_DRIVER": "software",
+    "SDL_VIDEODRIVER": "x11",
+    "SDL_VIDEO_X11_FORCE_EGL": "1",
+    "MESA_LOADER_DRIVER_OVERRIDE": "llvmpipek",
+    "LIBGL_ALWAYS_SOFTWARE": "1",
+    "DISPLAY": ":0"
+  },
+  "postCreateCommand": [
+    "sudo chown vscode:vscode -R /home/vscode",
+    "sudo apt update && sudo apt install -y libx11-dev libxext-dev libsdl2-dev",
+    "source .venv/bin/activate"
+  ]
+}
+
