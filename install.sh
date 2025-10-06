@@ -14,8 +14,14 @@ ln -sf "$PWD"/.bashrc \
        "$HOME"/.bashrc
 ln -sf "$PWD"/.bash_aliases \
        "$HOME"/.bash_aliases
+
 ln -sf "$PWD"/.tmux.conf \
        "$HOME"/.tmux.conf
+
+ln -sf "$PWD"/.gitconfig \
+       "$HOME"/.gitconfig
+ln -sf "$PWD"/.gitignore \
+       "$HOME"/.gitignore
 
 nix-env -iA nixpkgs.myPackages
 
