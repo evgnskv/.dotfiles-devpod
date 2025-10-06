@@ -5,6 +5,7 @@
       paths = [
         coreutils
         bash-completion
+        xpra
         bootdev-cli
         go
         uv
