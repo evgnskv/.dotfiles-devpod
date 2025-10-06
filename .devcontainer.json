@@ -26,8 +26,18 @@
     "LIBGL_ALWAYS_SOFTWARE": "1",
     "DISPLAY": ":0"
   },
+  "forwardPorts": [
+    80
+  ],
+  "portsAttributes": {
+    "80": {
+      "label": "XPRA Web UI",
+      "onAutoForward": "openBrowser"
+    }
   "postCreateCommand": [
-    "sudo apt update && sudo apt install -y libx11-dev libxext-dev libsdl2-dev",
+    "sudo apt update",
+    "sudo apt install -y libx11-dev libxext-dev libsdl2-dev",
+    "sudo apt install -y xvfb",
   ]
 }
 
