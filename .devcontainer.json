@@ -8,7 +8,7 @@
   },
   "runArgs": [
     "--privileged",
-    "-v", "/Users/evgnskv/.strongbox/agent.sock:/home/vscode/.strongbox/agent.sock"
+    "-v", "/Users/evgnskv/.strongbox:/home/vscode/.strongbox"
   ],
   "mounts": [
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
@@ -21,23 +21,13 @@
     "SDL_ALLOW_SOFTWARE_RENDERING": "1",
     "SDL_RENDER_DRIVER": "software",
     "SDL_VIDEODRIVER": "x11",
-    "SDL_VIDEO_X11_FORCE_EGL": "1",
+    "SDL_FRAMEBUFFER_ACCELERATION": "0",
     "MESA_LOADER_DRIVER_OVERRIDE": "llvmpipek",
     "LIBGL_ALWAYS_SOFTWARE": "1",
     "DISPLAY": ":0"
   },
-  "forwardPorts": [
-    80
-  ],
-  "portsAttributes": {
-    "80": {
-      "label": "XPRA Web UI",
-      "onAutoForward": "openBrowser"
-    }
   "postCreateCommand": [
-    "sudo apt update",
-    "sudo apt install -y libx11-dev libxext-dev libsdl2-dev",
-    "sudo apt install -y xvfb",
+    "sudo apt update && sudo apt install -y libx11-dev libxext-dev libsdl2-dev"
   ]
 }
 
