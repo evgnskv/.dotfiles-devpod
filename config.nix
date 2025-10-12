@@ -6,6 +6,7 @@
         coreutils
         bash-completion
         bootdev-cli
+        python3
         go
         uv
         jq
