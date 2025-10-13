@@ -5,6 +5,11 @@
       paths = [
         coreutils
         bash-completion
+        werf
+        go
+        atlas
+        nodejs_24
+        yarn
         jq
         yq
       	tmux
