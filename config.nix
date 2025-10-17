@@ -17,6 +17,7 @@
         fzf
         ripgrep
         lsd
+        opencode
       ];
     };
   };
