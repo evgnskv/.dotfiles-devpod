@@ -23,5 +23,8 @@ ln -sf "$PWD"/.gitconfig \
 ln -sf "$PWD"/.gitignore \
        "$HOME"/.gitignore
 
+ln -sf "$PWD"/opencode.json \
+       "$HOME"/opencode/opencode.json
+
 nix-env -iA nixpkgs.myPackages
 

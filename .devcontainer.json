@@ -8,7 +8,8 @@
   },
   "runArgs": [
     "--privileged",
-    "-v", "/Users/evgnskv/.strongbox:/home/vscode/.strongbox"
+    "-v", "/Users/evgnskv/.strongbox:/home/vscode/.strongbox",
+    "-v", "/Users/evgnskv/.local/share/opencode/auth.json:/home/vscode/.local/share/opencode/auth.json",
   ],
   "mounts": [
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
