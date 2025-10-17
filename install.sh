@@ -4,6 +4,7 @@ export XDG_CONFIG_HOME="$HOME"/.config
 export NIXPKGS_ALLOW_UNFREE=1
 
 mkdir -p "$XDG_CONFIG_HOME"/nixpkgs
+mkdir -p "$XDG_CONFIG_HOME"/opencode
 
 ln -sf "$PWD"/config.nix \
        "$XDG_CONFIG_HOME"/nixpkgs/config.nix
