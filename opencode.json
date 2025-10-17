@@ -6,7 +6,7 @@
       "options": {
         "baseURL": "https://api.anthropic.com/v1"
       }
-    }
+    },
     "openai": {
       "options": {
         "baseURL": "https://api.openai.com/v1"
