@@ -10,6 +10,7 @@
         atlas
         nodejs_24
         yarn
+        ansible
         jq
         yq
       	tmux
