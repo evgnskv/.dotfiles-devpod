@@ -6,6 +6,7 @@
   "runArgs": [
     "--privileged",
     "-v", "/Users/ts-evgeniy.noskov/.local/share/opencode/auth.json:/home/vscode/.local/share/opencode/auth.json",
+    "-v", "/etc/ssl/certs/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt"
   ],
   "mounts": [
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
