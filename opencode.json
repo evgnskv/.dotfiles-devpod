@@ -2,15 +2,5 @@
   "$schema": "https://opencode.ai/config.json",
   "theme": "system",
   "provider": {
-    "anthropic": {
-      "options": {
-        "baseURL": "https://api.anthropic.com/v1"
-      }
-    },
-    "openai": {
-      "options": {
-        "baseURL": "https://api.openai.com/v1"
-      }
-    }
-  }
+    "openrouter": {}
 }

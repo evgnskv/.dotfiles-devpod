@@ -8,17 +8,15 @@
   },
   "runArgs": [
     "--privileged",
-    "-v", "/Users/evgnskv/.strongbox:/home/vscode/.strongbox",
-    "-v", "/Users/evgnskv/.local/share/opencode/auth.json:/home/vscode/.local/share/opencode/auth.json",
+    "-v", "/Users/ts-evgeniy.noskov/.local/share/opencode/auth.json:/home/vscode/.local/share/opencode/auth.json",
   ],
   "mounts": [
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
-    "source=${env:HOME}/.ssh/config,target=/etc/ssh/ssh_config.d/custom.conf,type=bind,readonly",
-    "source=${env:HOME}/.ssh/github_ed25519,target=/home/vscode/.ssh/github_ed25519,type=bind,readonly",
-    "source=${env:HOME}/.ssh/github_ed25519.pub,target=/home/vscode/.ssh/github_ed25519.pub,type=bind,readonly"
   ],
   "containerEnv": {
     "DOCKER_BUILDKIT": "1",
+    "SSL_CERT_FILE": "/etc/ssl/certs/ca-certificates.crt",
+    "CURL_CA_BUNDLE": "/etc/ssl/certs/ca-certificates.crt",
+    "REQUESTS_CA_BUNDLE": "/etc/ssl/certs/ca-certificates.crt"
   },
 }
-
