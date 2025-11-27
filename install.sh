@@ -1,7 +1,10 @@
 #!/bin/bash
 
+apt-get update && apt-get install -y ca-certificates
+
 export XDG_CONFIG_HOME="$HOME"/.config
 export NIXPKGS_ALLOW_UNFREE=1
+export NIX_SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 
 mkdir -p "$XDG_CONFIG_HOME"/nixpkgs
 mkdir -p "$XDG_CONFIG_HOME"/opencode
