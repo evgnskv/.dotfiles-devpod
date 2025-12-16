@@ -4,5 +4,5 @@ alias tree='lsd --tree'
 alias vim='nvim'
 alias vi='nvim'
 
-alias kubectl='k'
+alias k='kubectl'
 
