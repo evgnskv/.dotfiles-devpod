@@ -1,11 +1,11 @@
 setup:
   - nix:
       root:
-        dir: "~/.dotfiles"
+        dir: "~/dotfiles"
         cmd: "vim config.nix"
         split:
           - v:
-              dir: "~/.dotfiles"
+              dir: "~/dotfiles"
               cmd: "nix --version"
               size: 15
 
