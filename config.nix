@@ -10,7 +10,6 @@
       	tmux
       	neovim
         stow
-        sshuttle
         fzf
         ripgrep
         lsd
