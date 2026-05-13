@@ -18,6 +18,10 @@ ln -sf "$PWD"/.bash_aliases \
 
 ln -sf "$PWD"/.tmux.conf \
        "$HOME"/.tmux.conf
+ln -sf "$PWD"/tmux-init.sh \
+       "$HOME"/tmux-init.sh
+ln -sf "$PWD"/tmux-session.yaml \
+       "$HOME"/tmux-session.yaml
 
 ln -sf "$PWD"/.gitconfig \
        "$HOME"/.gitconfig
