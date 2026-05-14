@@ -1,0 +1,27 @@
+setup:
+  - nix:
+      root:
+        dir: "~/dotfiles"
+        cmd: "vim config.nix"
+        split:
+          - v:
+              dir: "~/dotfiles"
+              cmd: "nix --version"
+              size: 15
+
+opencode:
+  - main:
+      root:
+        dir: "/workspaces"
+        cmd: "opencode"
+
+workspaces:
+  - lab:
+      root:
+        dir: "/workspaces"
+        cmd: "vim ."
+        split:
+          - v:
+              dir: "/workspaces"
+              cmd: "git status"
+              size: 15
