@@ -19,7 +19,7 @@ in
         lsd
         opencode
         hermes-pkg
-        python312Packages.python-telegram-bot
+        python314Packages.python-telegram-bot
       ];
     };
   };
