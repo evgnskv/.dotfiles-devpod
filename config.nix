@@ -14,6 +14,7 @@
         ripgrep
         lsd
         opencode
+        python312Packages.python-telegram-bot
       ];
     };
   };
