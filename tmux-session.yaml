@@ -8,20 +8,23 @@ setup:
               dir: "~/dotfiles"
               cmd: "nix --version"
               size: 15
-
-opencode:
-  - main:
+  - tmux:
       root:
-        dir: "/workspaces"
-        cmd: "opencode"
-
-workspaces:
-  - lab:
-      root:
-        dir: "/workspaces"
-        cmd: "vim ."
+        dir: "~/dotfiles"
+        cmd: "vim tmux-session.yaml"
         split:
           - v:
-              dir: "/workspaces"
-              cmd: "git status"
+              dir: "~/dotfiles"
+              cmd: "tmux has-session -t setup"
               size: 15
+
+workspaces:
+  - gateway:
+      root:
+        dir: "/workspaces"
+        cmd: "hermes gateway"
+  - workspace:
+      root:
+        dir: "/workspaces"
+        cmd: "hermes"
+

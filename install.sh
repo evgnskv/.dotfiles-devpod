@@ -32,4 +32,4 @@ ln -sf "$PWD"/opencode.json \
        "$XDG_CONFIG_HOME"/opencode/opencode.json
 
 nix-env -iA nixpkgs.myPackages
-
+nix profile install github:NousResearch/hermes-agent
