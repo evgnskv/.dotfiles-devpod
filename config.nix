@@ -1,6 +1,6 @@
 let
   hermes-flake = builtins.getFlake "github:NousResearch/hermes-agent";
-  hermes-pkg = hermes-flake.packages.${builtins.currentSystem}.default;
+  hermes-pkg = hermes-flake.packages.${builtins.currentSystem}.messaging;
 in
 {
   packageOverrides = pkgs: with pkgs; {
@@ -19,8 +19,6 @@ in
         lsd
         opencode
         hermes-pkg
-        python3
-        python314Packages.python-telegram-bot
       ];
     };
   };
