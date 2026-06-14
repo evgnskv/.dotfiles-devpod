@@ -3,11 +3,15 @@
 export XDG_CONFIG_HOME="$HOME"/.config
 export NIXPKGS_ALLOW_UNFREE=1
 
+mkdir -p "$XDG_CONFIG_HOME"/nix
 mkdir -p "$XDG_CONFIG_HOME"/nixpkgs
 mkdir -p "$XDG_CONFIG_HOME"/opencode
 
+ln -sf "$PWD"/nix.conf \
+       "$XDG_CONFIG_HOME"/nix/nix.conf
 ln -sf "$PWD"/config.nix \
        "$XDG_CONFIG_HOME"/nixpkgs/config.nix
+
 ln -sf "$PWD"/nvim \
        "$XDG_CONFIG_HOME"/nvim
 
@@ -32,4 +36,4 @@ ln -sf "$PWD"/opencode.json \
        "$XDG_CONFIG_HOME"/opencode/opencode.json
 
 nix-env -iA nixpkgs.myPackages
-nix profile install github:NousResearch/hermes-agent
+
