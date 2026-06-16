@@ -22,7 +22,7 @@ workspaces:
   - gateway:
       root:
         dir: "/workspaces"
-        cmd: "hermes gateway"
+        cmd: "hermes gateway run"
   - workspace:
       root:
         dir: "/workspaces"

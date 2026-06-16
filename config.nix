@@ -19,6 +19,10 @@ in
         lsd
         opencode
         hermes-pkg
+        python3
+        kubectl
+        opentofu
+        awscli2
       ];
     };
   };
