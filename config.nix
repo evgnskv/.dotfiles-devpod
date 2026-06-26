@@ -1,6 +1,6 @@
 let
   hermes-flake = builtins.getFlake "github:NousResearch/hermes-agent";
-  hermes-pkg = hermes-flake.packages.${builtins.currentSystem}.messaging;
+  hermes-pkg = hermes-flake.packages.${builtins.currentSystem}.default;
 in
 {
   packageOverrides = pkgs: with pkgs; {
@@ -17,12 +17,9 @@ in
         fzf
         ripgrep
         lsd
+        python3
         opencode
         hermes-pkg
-        python3
-        kubectl
-        opentofu
-        awscli2
       ];
     };
   };
