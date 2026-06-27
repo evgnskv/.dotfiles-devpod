@@ -19,7 +19,7 @@ in
         lsd
         opencode
         python3
-      # hermes-pkg
+        hermes-pkg
       ];
     };
   };
