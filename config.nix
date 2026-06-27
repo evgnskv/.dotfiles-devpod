@@ -17,9 +17,9 @@ in
         fzf
         ripgrep
         lsd
-        python3
         opencode
-        hermes-pkg
+        python3
+      # hermes-pkg
       ];
     };
   };

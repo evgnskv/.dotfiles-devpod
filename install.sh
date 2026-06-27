@@ -35,6 +35,5 @@ ln -sf "$PWD"/.gitignore \
 ln -sf "$PWD"/opencode.json \
        "$XDG_CONFIG_HOME"/opencode/opencode.json
 
-nix-env -iA nixpkgs.myPackages
-nix-collect-garbage -d && nix store optimise
+nix-env -iA nixpkgs.myPackages && nix-collect-garbage -d && nix store optimise
 
