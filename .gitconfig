@@ -1,6 +1,5 @@
 [user]
   name = hermes-agent
   email = hermes-agent@evgnskv
-  username = hermes-agent
 [core]
   excludesFile = "~/.gitignore"
