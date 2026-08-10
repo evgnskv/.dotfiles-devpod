@@ -1,4 +1,5 @@
 {
+  "theme": "solarized",
   "$schema": "https://opencode.ai/config.json",
-  "theme": "solarized"
+  "disabled_providers": ["opencode"]
 }
