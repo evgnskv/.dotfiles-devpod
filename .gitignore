@@ -42,4 +42,4 @@ zsdoc/data
 .DS_Store
 
 # Plugin versions intentionally follow upstream defaults
-/nvim/lazy-lock.json
+/nvim/nvim-pack-lock.json
