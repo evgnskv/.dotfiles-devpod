@@ -3,7 +3,14 @@ let
   hermes-pkg = hermes-flake.packages.${builtins.currentSystem}.default;
 in
 {
-  packageOverrides = pkgs: with pkgs; {
+  packageOverrides = pkgs: with pkgs; let
+    workspacePackagesFile =
+      /workspaces + "/${builtins.getEnv "DEVPOD_WORKSPACE_ID"}/packages.nix";
+    workspacePackages =
+      if builtins.pathExists workspacePackagesFile
+      then import workspacePackagesFile pkgs
+      else [ ];
+  in {
     myPackages = pkgs.buildEnv {
       name = "toolbox";
       paths = [
@@ -13,14 +20,12 @@ in
         yq
         tmux
         neovim
-        stow
         fzf
         ripgrep
         lsd
-        opencode
         python3
         hermes-pkg
-      ];
+      ] ++ workspacePackages;
     };
   };
 }
