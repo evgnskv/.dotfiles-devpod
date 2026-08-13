@@ -13,7 +13,6 @@ in
         yq
         tmux
         neovim
-        tree-sitter
         stow
         fzf
         ripgrep
