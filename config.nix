@@ -1,5 +1,12 @@
 {
-  packageOverrides = pkgs: with pkgs; {
+  packageOverrides = pkgs: with pkgs; let
+    workspacePackagesFile =
+      /workspaces + "/${builtins.getEnv "DEVPOD_WORKSPACE_ID"}/packages.nix";
+    workspacePackages =
+      if builtins.pathExists workspacePackagesFile
+      then import workspacePackagesFile pkgs
+      else [ ];
+  in {
     myPackages = pkgs.buildEnv {
       name = "toolbox";
       paths = [
@@ -7,14 +14,12 @@
         bash-completion
         jq
         yq
-      	tmux
-      	neovim
-        stow
+        tmux
+        neovim
         fzf
         ripgrep
         lsd
-        opencode
-      ];
+      ] ++ workspacePackages;
     };
   };
 }
