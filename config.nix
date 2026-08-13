@@ -16,11 +16,9 @@
         yq
         tmux
         neovim
-        stow
         fzf
         ripgrep
         lsd
-        opencode
       ] ++ workspacePackages;
     };
   };
