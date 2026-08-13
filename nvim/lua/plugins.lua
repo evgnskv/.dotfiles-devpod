@@ -2,22 +2,6 @@ local github = function(repo)
   return "https://github.com/" .. repo
 end
 
-vim.api.nvim_create_autocmd("PackChanged", {
-  callback = function(args)
-    local data = args.data
-    if data.spec.name ~= "nvim-treesitter" then
-      return
-    end
-    if data.kind ~= "install" and data.kind ~= "update" then
-      return
-    end
-    if not data.active then
-      vim.cmd.packadd("nvim-treesitter")
-    end
-    vim.cmd("TSUpdate")
-  end,
-})
-
 vim.pack.add({
   github("nvim-lua/plenary.nvim"),
   github("nvim-tree/nvim-web-devicons"),
@@ -118,12 +102,6 @@ vim.keymap.set("n", "<leader>fh", telescope.help_tags, { desc = "Telescope help 
 
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "Format buffer" })
 
-local treesitter = require("nvim-treesitter")
-local available_parsers = {}
-for _, language in ipairs(treesitter.get_available()) do
-  available_parsers[language] = true
-end
-
 local function activate_treesitter(buf, language)
   local ok, err = pcall(vim.treesitter.start, buf, language)
   if not ok then
@@ -139,28 +117,7 @@ local function start_treesitter(args)
   local ok, parser = pcall(vim.treesitter.get_parser, args.buf, language)
   if ok and parser then
     activate_treesitter(args.buf, language)
-    return
   end
-  if not available_parsers[language] then
-    return
-  end
-
-  treesitter.install({ language }):await(function(err, installed)
-    if err or not installed then
-      vim.schedule(function()
-        vim.notify(
-          "Failed to install Treesitter parser for " .. language .. ": " .. tostring(err or "unknown error"),
-          vim.log.levels.ERROR
-        )
-      end)
-      return
-    end
-    vim.schedule(function()
-      if vim.api.nvim_buf_is_valid(args.buf) then
-        activate_treesitter(args.buf, language)
-      end
-    end)
-  end)
 end
 
 vim.api.nvim_create_autocmd("FileType", {
