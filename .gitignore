@@ -40,5 +40,5 @@ zsdoc/data
 # End of https://www.toptal.com/developers/gitignore/api/zsh
 
 # Plugin versions intentionally follow upstream defaults
-/nvim/lazy-lock.json
+/nvim/nvim-pack-lock.json
 
