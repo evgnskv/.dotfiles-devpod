@@ -22,7 +22,7 @@ vim.pack.add({
   github("nvim-lua/plenary.nvim"),
   github("nvim-tree/nvim-web-devicons"),
   github("MunifTanjim/nui.nvim"),
-  { src = github("nvim-treesitter/nvim-treesitter"), version = "main" },
+  github("nvim-treesitter/nvim-treesitter"),
   github("hrsh7th/cmp-nvim-lsp"),
   github("hrsh7th/nvim-cmp"),
   github("mason-org/mason.nvim"),
@@ -32,7 +32,7 @@ vim.pack.add({
   github("nvim-neo-tree/neo-tree.nvim"),
   github("MeanderingProgrammer/render-markdown.nvim"),
   github("craftzdog/solarized-osaka.nvim"),
-  { src = github("nvim-telescope/telescope.nvim"), version = "0.1.8" },
+  github("nvim-telescope/telescope.nvim"),
 }, { confirm = false, load = true })
 
 vim.o.termguicolors = true
