@@ -103,7 +103,11 @@ vim.keymap.set("n", "<leader>e", function()
   end
 end, { desc = "Toggle Explorer (cwd)" })
 
-require("render-markdown").setup({})
+local render_markdown = require("render-markdown")
+render_markdown.setup({})
+vim.keymap.set("n", "<leader>m", render_markdown.buf_toggle, {
+  desc = "Toggle Markdown rendering",
+})
 
 require("telescope").setup({})
 local telescope = require("telescope.builtin")
