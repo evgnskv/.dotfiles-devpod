@@ -12,6 +12,8 @@ ln -sf "$PWD"/nix.conf \
 ln -sf "$PWD"/config.nix \
        "$XDG_CONFIG_HOME"/nixpkgs/config.nix
 
+git submodule update --init --recursive nvim
+
 ln -sf "$PWD"/nvim \
        "$XDG_CONFIG_HOME"/nvim
 
