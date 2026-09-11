@@ -11,8 +11,8 @@ ln -sf "$PWD"/config.nix \
 
 git submodule update --init --recursive nvim
 
-ln -sf "$PWD"/nvim \
-       "$XDG_CONFIG_HOME"/nvim
+ln -sfn "$PWD"/nvim \
+        "$XDG_CONFIG_HOME"/nvim
 
 ln -sf "$PWD"/.bashrc \
        "$HOME"/.bashrc
