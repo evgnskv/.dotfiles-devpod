@@ -1,5 +1,0 @@
-{
-  "theme": "solarized",
-  "$schema": "https://opencode.ai/config.json",
-  "disabled_providers": ["opencode"]
-}
